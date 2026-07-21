@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 63;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		28A6CB62898F670C74EF597B /* StatCappyWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 56E3F8E59F7DF25C83B9A572 /* StatCappyWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3434418B12CD7EB7AE401666 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D43FD910087FA844D5BB72 /* IOKit.framework */; };
 		4522DA1DF88A22FEE2C9D5AB /* StatCappyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42884D4879C45EA4557101C3 /* StatCappyWidget.swift */; };
+		870C819DAA34EEDF0743B1B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9D1B99D37E63CDED64848DB /* Assets.xcassets */; };
 		898A37D293A2604786D4AF1C /* SystemSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491FA9C9CE3C69F8439B5F5B /* SystemSnapshot.swift */; };
 		9A09918893352387441941C6 /* StatCappyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AFF3D5853A55D5EABD4D18 /* StatCappyApp.swift */; };
 		9BD80173BD5B1D0E552CE723 /* SensorBridge.c in Sources */ = {isa = PBXBuildFile; fileRef = 51BA56D7E4BC1989BDE2F923 /* SensorBridge.c */; };
@@ -64,6 +65,7 @@
 		B2B4EB53A6C9BA994557E753 /* SystemMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMonitor.swift; sourceTree = "<group>"; };
 		B2D43FD910087FA844D5BB72 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		B2E4EA144344DC7A4BCB86CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C9D1B99D37E63CDED64848DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E600DA29FAB681A175D6BEEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E8795391B975B19AD78F1D42 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -142,6 +144,7 @@
 		81039526E3DEC1785685B51D /* StatCappy */ = {
 			isa = PBXGroup;
 			children = (
+				C9D1B99D37E63CDED64848DB /* Assets.xcassets */,
 				E600DA29FAB681A175D6BEEE /* Info.plist */,
 				812E8C4765AC5EA776121A35 /* MenuDashboard.swift */,
 				26723724EE7D7C9ABC6B6DEE /* SettingsView.swift */,
@@ -169,6 +172,7 @@
 			buildConfigurationList = 6D37A3735FAEE3AA36B182C9 /* Build configuration list for PBXNativeTarget "StatCappy" */;
 			buildPhases = (
 				670DF92A333ECA7B14DB6F0B /* Sources */,
+				298320F45E1C74116AD4F1DE /* Resources */,
 				3891C7A6CA6C6D4FE65130BB /* Frameworks */,
 				B84731BDAD34D6454B668A21 /* Embed Foundation Extensions */,
 			);
@@ -229,6 +233,7 @@
 			);
 			mainGroup = 3EBE4E8F46FABBEFEA87CF1F;
 			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -237,6 +242,17 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		298320F45E1C74116AD4F1DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				870C819DAA34EEDF0743B1B2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		670DF92A333ECA7B14DB6F0B /* Sources */ = {
@@ -279,9 +295,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = StatCappyWidget/StatCappyWidget.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 83NZ67H3BX;
 				INFOPLIST_FILE = StatCappyWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -299,9 +313,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = StatCappyWidget/StatCappyWidget.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 83NZ67H3BX;
 				INFOPLIST_FILE = StatCappyWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -319,9 +331,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = StatCappy/StatCappy.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 83NZ67H3BX;
 				INFOPLIST_FILE = StatCappy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -339,9 +349,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = StatCappy/StatCappy.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 83NZ67H3BX;
 				INFOPLIST_FILE = StatCappy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

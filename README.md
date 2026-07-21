@@ -2,6 +2,10 @@
 
 > A tiny capybara that keeps an eye on your Mac.
 
+<p align="center">
+  <img src="Design/AppIcon-source.png" width="180" alt="StatCappy Midnight Glass capybara icon">
+</p>
+
 ![macOS 14+](https://img.shields.io/badge/macOS-14%2B-111111?logo=apple)
 ![Swift 6](https://img.shields.io/badge/Swift-6-F05138?logo=swift&logoColor=white)
 ![Native SwiftUI](https://img.shields.io/badge/UI-SwiftUI-0A84FF)
@@ -33,7 +37,7 @@ StatCappy currently builds from source:
 4. Ensure both targets use the App Group `group.com.statcappy.app`.
 5. Select the **StatCappy** scheme and press **Run**.
 
-StatCappy is a menu-bar utility, so it intentionally does not appear in the Dock. You can enable **Launch at Login** from its settings.
+StatCappy is a menu-bar utility, so it does not appear in the Dock by default. You can independently enable **Show StatCappy in the Dock** and **Launch at Login** from its settings.
 
 ### Requirements
 
@@ -60,6 +64,8 @@ Liquid Glass is the default. On macOS versions with the native API, the popover 
 Kawaii mode uses pale cream and blush surfaces, dark cocoa text, deep raspberry accents, and SwiftUI-drawn capybaras. It avoids image decoding and animation timers to keep idle overhead low.
 
 Switch the menu-bar appearance under **Settings → Appearance**.
+
+The running app icon follows the selected appearance: Midnight Glass for Liquid Glass mode and Sakura Minimal for Kawaii mode. The installed Finder icon remains Midnight Glass.
 
 ## Temperature support
 

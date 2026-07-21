@@ -25,6 +25,7 @@ targets:
         CODE_SIGN_ENTITLEMENTS: StatCappy/StatCappy.entitlements
         SWIFT_OBJC_BRIDGING_HEADER: SensorBridge/SensorBridge.h
         PRODUCT_NAME: StatCappy
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
     dependencies:
       - sdk: IOKit.framework
       - sdk: ServiceManagement.framework
@@ -55,4 +56,3 @@ schemes:
         StatCappyWidget: all
     run:
       config: Debug
-
