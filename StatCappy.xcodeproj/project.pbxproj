@@ -1,0 +1,511 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 63;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01F07DA0CDC8224D76EF72C6 /* KawaiiTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04654F3DC717EAADE673B0EA /* KawaiiTheme.swift */; };
+		077B0C034A2E3AC097FB891C /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8795391B975B19AD78F1D42 /* WidgetKit.framework */; };
+		23A5E8F90A7D8DCFA3763BEC /* KawaiiTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04654F3DC717EAADE673B0EA /* KawaiiTheme.swift */; };
+		28A6CB62898F670C74EF597B /* StatCappyWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 56E3F8E59F7DF25C83B9A572 /* StatCappyWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3434418B12CD7EB7AE401666 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D43FD910087FA844D5BB72 /* IOKit.framework */; };
+		4522DA1DF88A22FEE2C9D5AB /* StatCappyWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42884D4879C45EA4557101C3 /* StatCappyWidget.swift */; };
+		898A37D293A2604786D4AF1C /* SystemSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491FA9C9CE3C69F8439B5F5B /* SystemSnapshot.swift */; };
+		9A09918893352387441941C6 /* StatCappyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AFF3D5853A55D5EABD4D18 /* StatCappyApp.swift */; };
+		9BD80173BD5B1D0E552CE723 /* SensorBridge.c in Sources */ = {isa = PBXBuildFile; fileRef = 51BA56D7E4BC1989BDE2F923 /* SensorBridge.c */; };
+		B42E7A15E95AA0B96525252B /* SystemMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B4EB53A6C9BA994557E753 /* SystemMonitor.swift */; };
+		B609DF1B79F48CE0348CDC5C /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE280D62185CBDD99B42E58 /* ServiceManagement.framework */; };
+		BF9198F0E98BA5C31C52A8F8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26723724EE7D7C9ABC6B6DEE /* SettingsView.swift */; };
+		DFE222C59495FCEEAECCB3DE /* SystemSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491FA9C9CE3C69F8439B5F5B /* SystemSnapshot.swift */; };
+		F271B056A15EE11FF7DFD956 /* MenuDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812E8C4765AC5EA776121A35 /* MenuDashboard.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		136CFD0BF7BE1EB260FC0B8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 185A88D0ED7329346B6B3E4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E30BF41FB672EBAFCA47A4B4;
+			remoteInfo = StatCappyWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B84731BDAD34D6454B668A21 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				28A6CB62898F670C74EF597B /* StatCappyWidget.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		04654F3DC717EAADE673B0EA /* KawaiiTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KawaiiTheme.swift; sourceTree = "<group>"; };
+		1597C0FE9746584F0C14BEBA /* StatCappy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StatCappy.entitlements; sourceTree = "<group>"; };
+		26723724EE7D7C9ABC6B6DEE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		42884D4879C45EA4557101C3 /* StatCappyWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCappyWidget.swift; sourceTree = "<group>"; };
+		491FA9C9CE3C69F8439B5F5B /* SystemSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemSnapshot.swift; sourceTree = "<group>"; };
+		51BA56D7E4BC1989BDE2F923 /* SensorBridge.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = SensorBridge.c; sourceTree = "<group>"; };
+		56E3F8E59F7DF25C83B9A572 /* StatCappyWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StatCappyWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A880F77096A4D02B46CE9A0 /* StatCappy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StatCappy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BE280D62185CBDD99B42E58 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		812E8C4765AC5EA776121A35 /* MenuDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDashboard.swift; sourceTree = "<group>"; };
+		97AFF3D5853A55D5EABD4D18 /* StatCappyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatCappyApp.swift; sourceTree = "<group>"; };
+		9B00A36FBD9E441C84F82A9A /* StatCappyWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StatCappyWidget.entitlements; sourceTree = "<group>"; };
+		AC65A259C7C796A4C81CDC37 /* SensorBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SensorBridge.h; sourceTree = "<group>"; };
+		B2B4EB53A6C9BA994557E753 /* SystemMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemMonitor.swift; sourceTree = "<group>"; };
+		B2D43FD910087FA844D5BB72 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		B2E4EA144344DC7A4BCB86CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E600DA29FAB681A175D6BEEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E8795391B975B19AD78F1D42 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3891C7A6CA6C6D4FE65130BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3434418B12CD7EB7AE401666 /* IOKit.framework in Frameworks */,
+				B609DF1B79F48CE0348CDC5C /* ServiceManagement.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5E81BE293F1D352F7F3346E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				077B0C034A2E3AC097FB891C /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0243C81492229E2D7FE5B572 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2D43FD910087FA844D5BB72 /* IOKit.framework */,
+				7BE280D62185CBDD99B42E58 /* ServiceManagement.framework */,
+				E8795391B975B19AD78F1D42 /* WidgetKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		24EC482F5CC09BAFC668570E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A880F77096A4D02B46CE9A0 /* StatCappy.app */,
+				56E3F8E59F7DF25C83B9A572 /* StatCappyWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3EBE4E8F46FABBEFEA87CF1F = {
+			isa = PBXGroup;
+			children = (
+				5C832204E98C164427AF0529 /* SensorBridge */,
+				7DB4B3A83892080662AB6CC0 /* Shared */,
+				81039526E3DEC1785685B51D /* StatCappy */,
+				EEA8971E2B95315B5993A230 /* StatCappyWidget */,
+				0243C81492229E2D7FE5B572 /* Frameworks */,
+				24EC482F5CC09BAFC668570E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5C832204E98C164427AF0529 /* SensorBridge */ = {
+			isa = PBXGroup;
+			children = (
+				51BA56D7E4BC1989BDE2F923 /* SensorBridge.c */,
+				AC65A259C7C796A4C81CDC37 /* SensorBridge.h */,
+			);
+			path = SensorBridge;
+			sourceTree = "<group>";
+		};
+		7DB4B3A83892080662AB6CC0 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				04654F3DC717EAADE673B0EA /* KawaiiTheme.swift */,
+				B2B4EB53A6C9BA994557E753 /* SystemMonitor.swift */,
+				491FA9C9CE3C69F8439B5F5B /* SystemSnapshot.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		81039526E3DEC1785685B51D /* StatCappy */ = {
+			isa = PBXGroup;
+			children = (
+				E600DA29FAB681A175D6BEEE /* Info.plist */,
+				812E8C4765AC5EA776121A35 /* MenuDashboard.swift */,
+				26723724EE7D7C9ABC6B6DEE /* SettingsView.swift */,
+				1597C0FE9746584F0C14BEBA /* StatCappy.entitlements */,
+				97AFF3D5853A55D5EABD4D18 /* StatCappyApp.swift */,
+			);
+			path = StatCappy;
+			sourceTree = "<group>";
+		};
+		EEA8971E2B95315B5993A230 /* StatCappyWidget */ = {
+			isa = PBXGroup;
+			children = (
+				B2E4EA144344DC7A4BCB86CC /* Info.plist */,
+				9B00A36FBD9E441C84F82A9A /* StatCappyWidget.entitlements */,
+				42884D4879C45EA4557101C3 /* StatCappyWidget.swift */,
+			);
+			path = StatCappyWidget;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		459E0FD9A54CA41E9D053E70 /* StatCappy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D37A3735FAEE3AA36B182C9 /* Build configuration list for PBXNativeTarget "StatCappy" */;
+			buildPhases = (
+				670DF92A333ECA7B14DB6F0B /* Sources */,
+				3891C7A6CA6C6D4FE65130BB /* Frameworks */,
+				B84731BDAD34D6454B668A21 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				661FD35985553931203F85D2 /* PBXTargetDependency */,
+			);
+			name = StatCappy;
+			packageProductDependencies = (
+			);
+			productName = StatCappy;
+			productReference = 7A880F77096A4D02B46CE9A0 /* StatCappy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E30BF41FB672EBAFCA47A4B4 /* StatCappyWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 407DA5D3D2519C8EE388FE8D /* Build configuration list for PBXNativeTarget "StatCappyWidget" */;
+			buildPhases = (
+				CAD13EB5F5370C451D52870F /* Sources */,
+				D5E81BE293F1D352F7F3346E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StatCappyWidget;
+			packageProductDependencies = (
+			);
+			productName = StatCappyWidget;
+			productReference = 56E3F8E59F7DF25C83B9A572 /* StatCappyWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		185A88D0ED7329346B6B3E4E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					459E0FD9A54CA41E9D053E70 = {
+						ProvisioningStyle = Automatic;
+					};
+					E30BF41FB672EBAFCA47A4B4 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4CEFBD5A5F2220B98787FD1C /* Build configuration list for PBXProject "StatCappy" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 3EBE4E8F46FABBEFEA87CF1F;
+			minimizedProjectReferenceProxies = 1;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				459E0FD9A54CA41E9D053E70 /* StatCappy */,
+				E30BF41FB672EBAFCA47A4B4 /* StatCappyWidget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		670DF92A333ECA7B14DB6F0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01F07DA0CDC8224D76EF72C6 /* KawaiiTheme.swift in Sources */,
+				F271B056A15EE11FF7DFD956 /* MenuDashboard.swift in Sources */,
+				9BD80173BD5B1D0E552CE723 /* SensorBridge.c in Sources */,
+				BF9198F0E98BA5C31C52A8F8 /* SettingsView.swift in Sources */,
+				9A09918893352387441941C6 /* StatCappyApp.swift in Sources */,
+				B42E7A15E95AA0B96525252B /* SystemMonitor.swift in Sources */,
+				898A37D293A2604786D4AF1C /* SystemSnapshot.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAD13EB5F5370C451D52870F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23A5E8F90A7D8DCFA3763BEC /* KawaiiTheme.swift in Sources */,
+				4522DA1DF88A22FEE2C9D5AB /* StatCappyWidget.swift in Sources */,
+				DFE222C59495FCEEAECCB3DE /* SystemSnapshot.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		661FD35985553931203F85D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E30BF41FB672EBAFCA47A4B4 /* StatCappyWidget */;
+			targetProxy = 136CFD0BF7BE1EB260FC0B8B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		15C05C4725C8AA7CC0EF5441 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = StatCappyWidget/StatCappyWidget.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 83NZ67H3BX;
+				INFOPLIST_FILE = StatCappyWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.statcappy.app.widget;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		72A875312CE742D226E70654 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = StatCappyWidget/StatCappyWidget.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 83NZ67H3BX;
+				INFOPLIST_FILE = StatCappyWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.statcappy.app.widget;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		833A4725B0A19619E8ED3259 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = StatCappy/StatCappy.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 83NZ67H3BX;
+				INFOPLIST_FILE = StatCappy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.statcappy.app;
+				PRODUCT_NAME = StatCappy;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = SensorBridge/SensorBridge.h;
+			};
+			name = Debug;
+		};
+		9A2707B5A28A80957DA2A54C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = StatCappy/StatCappy.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 83NZ67H3BX;
+				INFOPLIST_FILE = StatCappy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.statcappy.app;
+				PRODUCT_NAME = StatCappy;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = SensorBridge/SensorBridge.h;
+			};
+			name = Release;
+		};
+		9C481223460DE0317D6FAF10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		BA0CA6F17E1019B90111F09B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		407DA5D3D2519C8EE388FE8D /* Build configuration list for PBXNativeTarget "StatCappyWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72A875312CE742D226E70654 /* Debug */,
+				15C05C4725C8AA7CC0EF5441 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4CEFBD5A5F2220B98787FD1C /* Build configuration list for PBXProject "StatCappy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA0CA6F17E1019B90111F09B /* Debug */,
+				9C481223460DE0317D6FAF10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6D37A3735FAEE3AA36B182C9 /* Build configuration list for PBXNativeTarget "StatCappy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				833A4725B0A19619E8ED3259 /* Debug */,
+				9A2707B5A28A80957DA2A54C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 185A88D0ED7329346B6B3E4E /* Project object */;
+}

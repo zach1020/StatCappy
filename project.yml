@@ -1,0 +1,58 @@
+name: StatCappy
+options:
+  bundleIdPrefix: com.statcappy
+  deploymentTarget:
+    macOS: "14.0"
+  xcodeVersion: "27.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+    CODE_SIGN_STYLE: Automatic
+targets:
+  StatCappy:
+    type: application
+    platform: macOS
+    sources:
+      - path: StatCappy
+      - path: Shared
+      - path: SensorBridge
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.statcappy.app
+        INFOPLIST_FILE: StatCappy/Info.plist
+        CODE_SIGN_ENTITLEMENTS: StatCappy/StatCappy.entitlements
+        SWIFT_OBJC_BRIDGING_HEADER: SensorBridge/SensorBridge.h
+        PRODUCT_NAME: StatCappy
+    dependencies:
+      - sdk: IOKit.framework
+      - sdk: ServiceManagement.framework
+      - target: StatCappyWidget
+        embed: true
+  StatCappyWidget:
+    type: app-extension
+    platform: macOS
+    sources:
+      - path: StatCappyWidget
+      - path: Shared
+        excludes:
+          - SystemMonitor.swift
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.statcappy.app.widget
+        INFOPLIST_FILE: StatCappyWidget/Info.plist
+        CODE_SIGN_ENTITLEMENTS: StatCappyWidget/StatCappyWidget.entitlements
+        SKIP_INSTALL: YES
+        APPLICATION_EXTENSION_API_ONLY: YES
+    dependencies:
+      - sdk: WidgetKit.framework
+schemes:
+  StatCappy:
+    build:
+      targets:
+        StatCappy: all
+        StatCappyWidget: all
+    run:
+      config: Debug
+
