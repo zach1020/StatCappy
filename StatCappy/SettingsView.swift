@@ -27,10 +27,19 @@ struct SettingsView: View {
                 Text("StatCappy reads available AppleSMC sensors and averages valid CPU/SoC readings. If macOS does not expose them on your model, the menu displays the system thermal-pressure state instead.")
                     .font(.caption).foregroundStyle(.secondary)
             }
+            Section("About") {
+                LabeledContent("Created by", value: "Zach Bohl (Cappy)")
+                Link(destination: URL(string: "https://github.com/zach1020")!) {
+                    Label("github.com/zach1020", systemImage: "chevron.left.forwardslash.chevron.right")
+                }
+                Link(destination: URL(string: "https://zachbohl.com")!) {
+                    Label("zachbohl.com", systemImage: "globe")
+                }
+            }
             if let errorMessage { Text(errorMessage).foregroundStyle(.red).font(.caption) }
         }
         .formStyle(.grouped)
-        .frame(width: 480, height: 330)
+        .frame(width: 480, height: 430)
         .tint(themeRaw == StatCappyTheme.kawaii.rawValue ? KawaiiTheme.pink : .cyan)
     }
 

@@ -16,7 +16,6 @@ final class SystemMonitor: ObservableObject {
     private var timer: Timer?
     private var previousCPU: (used: UInt64, total: UInt64)?
     private var previousNetwork: (down: UInt64, up: UInt64, date: Date)?
-    private var lastWidgetReload = Date.distantPast
 
     init() {
         let saved = UserDefaults.standard.double(forKey: "refreshInterval")
@@ -50,12 +49,10 @@ final class SystemMonitor: ObservableObject {
             updatedAt: .now
         )
         SharedSnapshotStore.save(snapshot)
-        // WidgetKit snapshots do not need menu-bar frequency. Throttling this is
-        // the biggest energy saving while keeping the Desktop widget current.
-        if Date().timeIntervalSince(lastWidgetReload) >= 15 {
-            WidgetCenter.shared.reloadAllTimelines()
-            lastWidgetReload = .now
-        }
+        // Keep every installed widget pointed at the same snapshot the menu bar
+        // just published. WidgetKit may coalesce rendering, but never receives
+        // an older app-side value.
+        WidgetCenter.shared.reloadAllTimelines()
     }
 
     private func restartTimer() {

@@ -51,7 +51,7 @@ StatCappy is a menu-bar utility, so it intentionally does not appear in the Dock
 
 The widget theme is independent. For example, the menu-bar dashboard can remain Kawaii while the Desktop widget uses Liquid Glass.
 
-The app writes each sample to the shared App Group and requests WidgetKit reloads every 15 seconds. WidgetKit controls the final rendering schedule, so macOS may occasionally defer a visible update. The widget always labels the time of its latest shared snapshot.
+The app writes every menu-bar sample to the shared App Group and immediately requests a WidgetKit reload. WidgetKit controls the final rendering schedule, so macOS may defer a visible update. The widget always labels the time of its latest shared snapshot.
 
 ## Appearance
 
@@ -99,6 +99,13 @@ project.yml         XcodeGen project definition
 ## Privacy
 
 System readings remain on your Mac. The only persisted data is the latest widget snapshot, chosen appearance, refresh interval, and launch-at-login preference. The app performs no outbound network requests.
+
+## About
+
+Created with care by **Zach Bohl (Cappy)**.
+
+- [GitHub — @zach1020](https://github.com/zach1020)
+- [zachbohl.com](https://zachbohl.com)
 
 ## Status
 
