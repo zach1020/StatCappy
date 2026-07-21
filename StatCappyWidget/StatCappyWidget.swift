@@ -1,25 +1,5 @@
 import WidgetKit
 import SwiftUI
-import AppIntents
-
-enum WidgetAppearance: String, AppEnum {
-    case liquidGlass
-    case kawaii
-
-    static let typeDisplayRepresentation: TypeDisplayRepresentation = "Appearance"
-    static let caseDisplayRepresentations: [WidgetAppearance: DisplayRepresentation] = [
-        .liquidGlass: "Liquid Glass",
-        .kawaii: "Kawaii"
-    ]
-}
-
-struct StatCappyConfigurationIntent: WidgetConfigurationIntent {
-    static let title: LocalizedStringResource = "StatCappy Appearance"
-    static let description = IntentDescription("Choose a style for this widget independently of the menu-bar app.")
-
-    @Parameter(title: "Appearance", default: .liquidGlass)
-    var appearance: WidgetAppearance
-}
 
 struct StatEntry: TimelineEntry {
     let date: Date
@@ -27,33 +7,24 @@ struct StatEntry: TimelineEntry {
     let theme: StatCappyTheme
 }
 
-struct StatProvider: AppIntentTimelineProvider {
+struct StatProvider: TimelineProvider {
     func placeholder(in context: Context) -> StatEntry {
         StatEntry(date: .now, snapshot: .placeholder, theme: .liquidGlass)
     }
 
-    func snapshot(for configuration: StatCappyConfigurationIntent, in context: Context) async -> StatEntry {
-        StatEntry(date: .now, snapshot: SharedSnapshotStore.load() ?? .placeholder, theme: theme(for: configuration))
+    func getSnapshot(in context: Context, completion: @escaping (StatEntry) -> Void) {
+        completion(makeEntry())
     }
 
-    func timeline(for configuration: StatCappyConfigurationIntent, in context: Context) async -> Timeline<StatEntry> {
-        let entry = StatEntry(date: .now, snapshot: SharedSnapshotStore.load() ?? .placeholder, theme: theme(for: configuration))
-        return Timeline(entries: [entry], policy: .after(Date().addingTimeInterval(15)))
+    func getTimeline(in context: Context, completion: @escaping (Timeline<StatEntry>) -> Void) {
+        completion(Timeline(entries: [makeEntry()], policy: .after(Date().addingTimeInterval(15))))
     }
 
-    func recommendations() -> [AppIntentRecommendation<StatCappyConfigurationIntent>] {
-        let glass = StatCappyConfigurationIntent()
-        glass.appearance = .liquidGlass
-        let kawaii = StatCappyConfigurationIntent()
-        kawaii.appearance = .kawaii
-        return [
-            AppIntentRecommendation(intent: glass, description: "Liquid Glass"),
-            AppIntentRecommendation(intent: kawaii, description: "Kawaii")
-        ]
-    }
-
-    private func theme(for configuration: StatCappyConfigurationIntent) -> StatCappyTheme {
-        configuration.appearance == .kawaii ? .kawaii : .liquidGlass
+    private func makeEntry() -> StatEntry {
+        ThemeStore.defaults.synchronize()
+        let rawTheme = ThemeStore.defaults.string(forKey: ThemeStore.widgetKey)
+        let theme = StatCappyTheme(rawValue: rawTheme ?? "") ?? .liquidGlass
+        return StatEntry(date: .now, snapshot: SharedSnapshotStore.load() ?? .placeholder, theme: theme)
     }
 }
 
@@ -163,14 +134,16 @@ struct StatCappyWidgetView: View {
 }
 
 struct StatCappyWidget: Widget {
-    let kind = "StatCappyWidget"
+    // A fresh kind avoids macOS restoring the incompatible AppIntent-backed
+    // configuration shipped briefly in 1.2.
+    let kind = "StatCappyWidgetV2"
 
     var body: some WidgetConfiguration {
-        AppIntentConfiguration(kind: kind, intent: StatCappyConfigurationIntent.self, provider: StatProvider()) {
+        StaticConfiguration(kind: kind, provider: StatProvider()) {
             StatCappyWidgetView(entry: $0)
         }
         .configurationDisplayName("StatCappy")
-        .description("Live Mac health with your choice of Liquid Glass or Kawaii appearance.")
+        .description("Live Mac health in your independently selected StatCappy widget theme.")
         .supportedFamilies([.systemSmall, .systemMedium])
         .contentMarginsDisabled()
     }

@@ -56,6 +56,7 @@ enum StatCappyTheme: String, CaseIterable, Identifiable, Sendable {
 
 enum ThemeStore {
     static let key = "selectedTheme"
+    static let widgetKey = "selectedWidgetTheme"
     nonisolated(unsafe) static let defaults = UserDefaults(suiteName: SharedSnapshotStore.suiteName)!
 }
 

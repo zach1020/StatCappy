@@ -1,5 +1,6 @@
 import SwiftUI
 import ServiceManagement
+import WidgetKit
 
 struct SettingsView: View {
     @ObservedObject var monitor: SystemMonitor
@@ -7,6 +8,7 @@ struct SettingsView: View {
     @State private var launchAtLogin = SMAppService.mainApp.status == .enabled
     @State private var errorMessage: String?
     @AppStorage("showDockIcon") private var showDockIcon = false
+    @AppStorage(ThemeStore.widgetKey, store: ThemeStore.defaults) private var widgetThemeRaw = StatCappyTheme.liquidGlass.rawValue
 
     var body: some View {
         Form {
@@ -17,6 +19,14 @@ struct SettingsView: View {
                 }
                 .onChange(of: themeRaw) { _, rawValue in
                     AppIconController.apply(theme: StatCappyTheme(rawValue: rawValue) ?? .liquidGlass)
+                }
+                Picker("Widget appearance", selection: $widgetThemeRaw) {
+                    Label("Liquid Glass", systemImage: "drop.halffull").tag(StatCappyTheme.liquidGlass.rawValue)
+                    Label("Kawaii", systemImage: "heart.fill").tag(StatCappyTheme.kawaii.rawValue)
+                }
+                .onChange(of: widgetThemeRaw) { _, _ in
+                    ThemeStore.defaults.synchronize()
+                    WidgetCenter.shared.reloadAllTimelines()
                 }
                 Toggle("Launch StatCappy at login", isOn: $launchAtLogin)
                     .onChange(of: launchAtLogin) { _, enabled in updateLoginItem(enabled) }

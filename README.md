@@ -50,8 +50,7 @@ StatCappy is a menu-bar utility, so it does not appear in the Dock by default. Y
 1. Run StatCappy at least once.
 2. Control-click the Desktop and choose **Edit Widgets**.
 3. Search for **StatCappy** and add the small or medium widget.
-4. Control-click the placed widget and choose **Edit StatCappy**.
-5. Set **Appearance** to **Liquid Glass** or **Kawaii**.
+4. Open StatCappy's **Settings** and set **Widget appearance** to **Liquid Glass** or **Kawaii**.
 
 The widget theme is independent. For example, the menu-bar dashboard can remain Kawaii while the Desktop widget uses Liquid Glass.
 
